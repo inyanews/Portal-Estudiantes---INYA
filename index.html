@@ -86,7 +86,7 @@
 </head>
 <body>
     <!-- Imagen del logo o ilustración -->
-    <img src=""C:\Users\ALEXANDER - UNIVO.LAPTOP-PRIVADA\Pictures\UNIVO.jpeg"" alt="Logo INYA" class="logo">
+    <img src="path/to/your/logo/UNIVO.jpeg" alt="Logo INYA" class="logo">
 
     <h1>Accede a tu cuenta institucional ¡Con un solo CLICK!</h1>
 
@@ -97,12 +97,13 @@
     <script>
         // Redirige al portal del estudiante
         function accesoEstudiante() {
-            window.location.href = "file:///C:/Users/ALEXANDER%20-%20UNIVO.LAPTOP-PRIVADA/Downloads/LOGIN.html#";
+            // Cambia esta URL por la ruta correcta a tu página de login para estudiantes
+            window.location.href = "login.html";  // Redirige a login.html
         }
 
         // Alerta para acceso docente
         function accesoDocente() {
-            alert("Docente no registrado, pidele al decano de tu institución que te otorgue un acceso docente e inténtalo de nuevo.");
+            alert("Docente no registrado, por favor contacta al decano de tu institución para que te otorgue un acceso.");
         }
 
         function crearRastro(x, y) {
