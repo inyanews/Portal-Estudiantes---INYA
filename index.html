@@ -24,7 +24,6 @@
             color: #003366;
         }
 
-        /* Estilo básico para los botones */
         .button {
             padding: 12px 24px;
             font-size: 18px;
@@ -39,14 +38,12 @@
             margin: 10px;
         }
 
-        /* Efecto de hover: cambio de color */
         .button:hover {
             background-color: #ddc703;
             color: #003366;
             transform: scale(1.1);
         }
 
-        /* Rastro de la pelota */
         .rastro {
             position: absolute;
             width: 10px;
@@ -56,7 +53,7 @@
             opacity: 0.7;
             pointer-events: none;
             z-index: 999;
-            animation: desvanecer 0.5s forwards; /* Animación para desvanecer el rastro */
+            animation: desvanecer 0.5s forwards;
         }
 
         @keyframes desvanecer {
@@ -77,15 +74,14 @@
             }
         }
 
-        /* Estilo para la imagen */
         .logo {
-            max-width: 150px; /* Ajusta el tamaño máximo de la imagen */
-            margin-bottom: 20px; /* Espacio entre la imagen y el título */
+            max-width: 150px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <!-- Imagen del logo o ilustración -->
+    <!-- Imagen del logo -->
     <img src="path/to/your/logo/UNIVO.jpeg" alt="Logo INYA" class="logo">
 
     <h1>Accede a tu cuenta institucional ¡Con un solo CLICK!</h1>
@@ -98,7 +94,7 @@
         // Redirige al portal del estudiante
         function accesoEstudiante() {
             // Cambia esta URL por la ruta correcta al portal del estudiante
-            window.location.href = "portal_estudiante.html";  // Ruta del portal estudiante
+            window.location.href = "portal-estudiante.html";  // Ruta del portal estudiante
         }
 
         // Alerta para acceso docente
