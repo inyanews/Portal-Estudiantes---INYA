@@ -1,86 +1,150 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Portal Estudiante</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Portal de alumnos, donde puedes ver las notas, materias inscritas, pagos realizados, entre otros.">
-    <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="img/icon.ico"/>
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="https://alumnos.inya.edu.sv/bootstrap/login/vendor/bootstrap/css/bootstrap.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="https://alumnos.inya.edu.sv/bootstrap/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="https://alumnos.inya.edu.sv/bootstrap/login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="https://alumnos.inya.edu.sv/bootstrap/login/vendor/animate/animate.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="https://alumnos.inya.edu.sv/bootstrap/login/vendor/animsition/css/animsition.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="https://alumnos.inya.edu.sv/bootstrap/login/css/util.css">
-    <link rel="stylesheet" type="text/css" href="https://alumnos.inya.edu.sv/bootstrap/login/css/main.css">
-    <!--===============================================================================================-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Estudiantes - INTECO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #003366;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 900px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        .info {
+            background-color: #ddc703;
+            color: #003366;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .button {
+            padding: 12px 24px;
+            font-size: 18px;
+            cursor: pointer;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            background-color: #003366;
+            margin-top: 20px;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            background-color: #ddc703;
+            color: #003366;
+            transform: scale(1.1);
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .footer a {
+            color: #003366;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-<body style="background-color: #666666;">
+<body>
 
-<div class="limiter">
-    <div class="container-login100">
-        <div class="wrap-login100">
-            <div class="login100-form validate-form">
+    <!-- Título de la página -->
+    <h1>Bienvenido al Portal Estudiantes de INTECO</h1>
 
-                <span class="login100-form-title p-b-43">
-                    Portal Estudiante
-                </span>
-
-                <div id="showAlert">
-                </div>
-                <div class="wrap-input100 validate-input" data-validate="Usuario es requerido">
-                    <input class="input100" type="text" name="usuario" id="usuario" maxlength="10" autocomplete="off">
-                    <span class="focus-input100"></span>
-                    <span class="label-input100">Usuario</span>
-                </div>
-
-                <div class="wrap-input100 validate-input" data-validate="Contraseña es requerida">
-                    <input class="input100" type="password" name="pass" id="pass" autocomplete="off">
-                    <span class="focus-input100"></span>
-                    <span class="label-input100">Contraseña</span>
-                </div>
-
-                <div class="flex-sb-m w-full p-t-3 p-b-32">
-                    <div>
-                        <!-- Se eliminó el enlace de "Olvidé mi contraseña" -->
-                    </div>
-                </div>
-
-                <div class="container-login100-form-btn">
-                    <button class="login100-form-btn" id="btnLogin">
-                        Iniciar Sesión
-                    </button>
-                </div>
-                <br>
-                <div class="flex-sb-m w-full p-t-3 p-b-32">
-                    <div class="txt1">
-                        Copyright &copy; 2024 INYA. Todos los derechos reservados.
-                    </div>
-                </div>
-            </div>
-            <!-- Se eliminó el fondo de la página -->
+    <!-- Información importante -->
+    <div class="container">
+        <div class="info">
+            <strong>Importante:</strong> Para acceder a tus calificaciones, materias y otros servicios, por favor inicia sesión con tu usuario y contraseña.
         </div>
+        
+        <div class="section-title">¿Qué puedes hacer en este portal?</div>
+        <ul>
+            <li>Ver tus calificaciones y avances académicos.</li>
+            <li>Consultar las materias en las que estás inscrito.</li>
+            <li>Revisar el estado de tus pagos y matrícula.</li>
+            <li>Recibir notificaciones importantes de la institución.</li>
+        </ul>
     </div>
-</div>
 
-<input type="hidden" name="csrf" value="188947664167749d0bb8dd05.93423592">
+    <!-- Formulario de inicio de sesión -->
+    <div class="container">
+        <form id="login-form">
+            <div>
+                <label for="usuario" style="font-size: 16px;">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" required style="width: 100%; padding: 12px; margin-top: 5px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+            <div>
+                <label for="contraseña" style="font-size: 16px;">Contraseña:</label>
+                <input type="password" id="contraseña" name="contraseña" required style="width: 100%; padding: 12px; margin-top: 5px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
 
-<!--===============================================================================================-->
-<script src="https://alumnos.inya.edu.sv/bootstrap/login/vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-<script src="https://alumnos.inya.edu.sv/bootstrap/login/vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
-<script src="https://alumnos.inya.edu.sv/bootstrap/login/vendor/bootstrap/js/popper.js"></script>
-<script src="https://alumnos.inya.edu.sv/bootstrap/login/vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-<script src="https://alumnos.inya.edu.sv/bootstrap/js/login.js"></script>
+            <button type="submit" class="button">Iniciar Sesión</button>
+        </form>
+    </div>
 
+    <!-- Sección de error en caso de que la autenticación falle -->
+    <div id="error-message" class="container" style="display: none; color: red;">
+        <p>Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 INTECO | Todos los derechos reservados</p>
+        <p>¿Olvidaste tu contraseña? <a href="https://alumnos.univo.edu.sv/reset_password.php" target="_blank">Haz clic aquí</a></p>
+    </div>
+
+    <script>
+        // Manejo de envío del formulario de inicio de sesión
+        document.getElementById("login-form").addEventListener("submit", function(e) {
+            e.preventDefault(); // Evita el envío por defecto del formulario
+
+            // Obtiene los valores del formulario
+            const usuario = document.getElementById("usuario").value;
+            const contraseña = document.getElementById("contraseña").value;
+
+            // Simulación de autenticación (aquí puedes conectar con un backend real)
+            if (usuario === "estudiante" && contraseña === "12345") {
+                // Si la autenticación es exitosa
+                alert("¡Bienvenido al portal, " + usuario + "!");
+                window.location.href = "dashboard.html"; // Redirige a la página de inicio del estudiante (ejemplo)
+            } else {
+                // Si la autenticación falla
+                document.getElementById("error-message").style.display = "block";
+            }
+        });
+    </script>
 </body>
 </html>
