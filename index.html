@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso INYA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #003366;
+        }
+
+        /* Estilo básico para los botones */
+        .button {
+            padding: 12px 24px;
+            font-size: 18px;
+            cursor: pointer;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            background-color: #003366;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s ease-in-out;
+            margin: 10px;
+        }
+
+        /* Efecto de hover: cambio de color */
+        .button:hover {
+            background-color: #ddc703;
+            color: #003366;
+            transform: scale(1.1);
+        }
+
+        /* Rastro de la pelota */
+        .rastro {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #003366;
+            opacity: 0.7;
+            pointer-events: none;
+            z-index: 999;
+            animation: desvanecer 0.5s forwards; /* Animación para desvanecer el rastro */
+        }
+
+        @keyframes desvanecer {
+            to {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+
+        /* Estilo para la imagen */
+        .logo {
+            max-width: 150px; /* Ajusta el tamaño máximo de la imagen */
+            margin-bottom: 20px; /* Espacio entre la imagen y el título */
+        }
+    </style>
+</head>
+<body>
+    <!-- Imagen del logo o ilustración -->
+    <img src=""C:\Users\ALEXANDER - UNIVO.LAPTOP-PRIVADA\Pictures\UNIVO.jpeg"" alt="Logo INYA" class="logo">
+
+    <h1>Accede a tu cuenta institucional ¡Con un solo CLICK!</h1>
+
+    <!-- Botones para redirigir al portal del estudiante y alerta para acceso docente -->
+    <button class="button" onclick="accesoEstudiante()">Acceso Estudiante</button>
+    <button class="button" onclick="accesoDocente()">Acceso Docente</button>
+
+    <script>
+        // Redirige al portal del estudiante
+        function accesoEstudiante() {
+            window.location.href = "file:///C:/Users/ALEXANDER%20-%20UNIVO.LAPTOP-PRIVADA/Downloads/LOGIN.html#";
+        }
+
+        // Alerta para acceso docente
+        function accesoDocente() {
+            alert("Docente no registrado, pidele al decano de tu institución que te otorgue un acceso docente e inténtalo de nuevo.");
+        }
+
+        function crearRastro(x, y) {
+            const rastro = document.createElement("div");
+            rastro.classList.add("rastro");
+            document.body.appendChild(rastro);
+
+            // Posiciona el rastro en las coordenadas del mouse
+            rastro.style.left = `${x}px`;
+            rastro.style.top = `${y}px`;
+
+            // Elimina el rastro después de que la animación termine
+            setTimeout(() => rastro.remove(), 1000);
+        }
+
+        document.addEventListener("mousemove", (e) => {
+            const x = e.pageX;
+            const y = e.pageY;
+
+            // Crea un rastro en la posición actual del mouse
+            crearRastro(x, y);
+        });
+    </script>
+</body>
+</html>
